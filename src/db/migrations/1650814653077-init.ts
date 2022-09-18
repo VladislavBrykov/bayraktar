@@ -22,6 +22,15 @@ export class Init1650814653077 implements MigrationInterface {
     await queryRunner.query(
       `ALTER TABLE "user_info" ADD CONSTRAINT "FK_59c55ac40f267d450246040899e" FOREIGN KEY ("user_id") REFERENCES "user"("id") ON DELETE NO ACTION ON UPDATE NO ACTION`,
     );
+    await queryRunner.query(
+      `ALTER TABLE "user" ADD "telegram" character varying(100)`,
+    );
+    await queryRunner.query(
+      `ALTER TABLE "user" ADD "instagram" character varying(100)`,
+    );
+    await queryRunner.query(
+      `ALTER TABLE "user" ADD "linked_in" character varying(100)`,
+    );
 
     //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     // await queryRunner.query(

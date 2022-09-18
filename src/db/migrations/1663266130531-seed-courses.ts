@@ -26,13 +26,64 @@ export class SeedCourses1663266130531 implements MigrationInterface {
   public async down(queryRunner: QueryRunner): Promise<void> {}
   private async createUsers(): Promise<void> {
     await this.userRepo.save({
-      firsName: 'Vlad',
+      firstName: 'Vlad',
       lastName: 'Brykov',
       avatar: '/hghsfhfgh',
-      profession: 'NodeJS',
+      profession: 'Back End',
       login: 'login',
       password: 'password',
+      telegram: '@VladislavBrk',
+      instagram: '@vl_brykov',
+      // linkedIn: '',
       table: { id: 1 },
+    });
+    await this.userRepo.save({
+      firstName: 'Dmytro',
+      lastName: 'Sukhariev',
+      avatar: '/hghsfhfgh',
+      profession: 'Full Stack',
+      login: 'login',
+      password: 'password',
+      telegram: '@dmytro_sukhariev',
+      // instagram: '@vl_brykov',
+      // linkedIn: '',
+      table: { id: 2 },
+    });
+    await this.userRepo.save({
+      firstName: 'Illa',
+      lastName: 'Exporter',
+      avatar: '/hghsfhfgh',
+      profession: 'Front End',
+      login: 'login',
+      password: 'password',
+      telegram: '@Exporter',
+      // instagram: '@vl_brykov',
+      // linkedIn: '',
+      table: { id: 4 },
+    });
+    await this.userRepo.save({
+      firstName: 'Artem',
+      lastName: 'Osuskiy',
+      avatar: '/hghsfhfgh',
+      profession: 'Back End',
+      login: 'login',
+      password: 'password',
+      telegram: '@undefined',
+      // instagram: '@vl_brykov',
+      // linkedIn: '',
+      table: { id: 5 },
+    });
+    await this.userRepo.save({
+      firstName: 'Yaroslav',
+      lastName: 'Mudryi',
+      avatar: '/hghsfhfgh',
+      profession: 'Back End',
+      login: 'login',
+      password: 'password',
+      telegram: '@undefined',
+      // instagram: '@vl_brykov',
+      // linkedIn: '',
+      table: { id: 6 },
     });
   }
 
